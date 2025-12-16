@@ -1,0 +1,263 @@
+/* Sezon Bahçe - Custom CSS */
+/* Bu dosya template'in orijinal CSS'lerini ezmek için kullanılır */
+
+/* ================================================== */
+/* Görsel Hover Efektleri */
+/* ================================================== */
+
+.img-hover-zoom {
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.img-hover-zoom img {
+    transition: transform 0.5s ease, filter 0.5s ease;
+}
+
+.img-hover-zoom:hover img {
+    transform: scale(1.1);
+    filter: brightness(1.1);
+}
+
+/* Hover ile gölge efekti */
+.img-hover-shadow {
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.img-hover-shadow:hover {
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+    transform: translateY(-5px);
+}
+
+/* ================================================== */
+/* 3D Tilt & Glow Efekti */
+/* ================================================== */
+
+.img-hover-3d {
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    transform-style: preserve-3d;
+    perspective: 1000px;
+}
+
+.img-hover-3d img {
+    transition: transform 0.6s ease;
+}
+
+.img-hover-3d::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255, 255, 255, 0.3),
+        transparent
+    );
+    transition: left 0.6s ease;
+    z-index: 10;
+}
+
+.img-hover-3d:hover {
+    transform: rotateY(-5deg) rotateX(5deg) scale(1.02);
+    box-shadow:
+        20px 20px 60px rgba(0, 0, 0, 0.3),
+        -5px -5px 20px rgba(255, 255, 255, 0.1);
+}
+
+.img-hover-3d:hover::before {
+    left: 100%;
+}
+
+.img-hover-3d:hover img {
+    transform: scale(1.05);
+}
+
+/* ================================================== */
+/* Neon Glow Efekti */
+/* ================================================== */
+
+.img-hover-glow {
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+    transition: all 0.4s ease;
+}
+
+.img-hover-glow img {
+    transition: transform 0.5s ease, filter 0.5s ease;
+}
+
+.img-hover-glow::after {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(45deg, var(--primary-color), #00ff88, var(--primary-color));
+    border-radius: 14px;
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    filter: blur(10px);
+}
+
+.img-hover-glow:hover::after {
+    opacity: 1;
+}
+
+.img-hover-glow:hover img {
+    transform: scale(1.03);
+}
+
+.img-hover-glow:hover {
+    box-shadow: 0 0 30px rgba(var(--primary-color-rgb), 0.5);
+}
+
+/* ================================================== */
+/* Basit Image Hover - Konum Bozmaz */
+/* ================================================== */
+
+.img-simple-hover {
+    transition: transform 0.4s ease, filter 0.4s ease, box-shadow 0.4s ease;
+    cursor: pointer;
+}
+
+.img-simple-hover:hover {
+    transform: scale(1.05);
+    filter: brightness(1.1);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* ================================================== */
+/* GSAP Hero Animasyonları */
+/* ================================================== */
+
+/* Hero başlık için 3D perspektif */
+.hero-title {
+    perspective: 1000px;
+    transform-style: preserve-3d;
+    cursor: default;
+}
+
+/* Split karakterler için stil */
+.hero-title .split-char {
+    display: inline-block;
+    will-change: transform, opacity;
+    backface-visibility: hidden;
+}
+
+/* Hero elementleri başlangıçta gizli (GSAP animasyonu öncesi) */
+.hero-subtitle,
+.hero-cta,
+.hero-stats,
+.hero-avatar {
+    will-change: transform, opacity;
+}
+
+/* Hero content scroll parallax için */
+.hero-content {
+    will-change: transform, opacity;
+}
+
+/* Avatar'ların üst üste binmesi için z-index ayarı */
+.hero-avatar:nth-child(1) { z-index: 3; }
+.hero-avatar:nth-child(2) { z-index: 2; }
+.hero-avatar:nth-child(3) { z-index: 1; }
+
+/* ================================================== */
+/* Why Choose Us - 3D Tilt Kartlar */
+/* ================================================== */
+
+.tilt-card {
+    transform-style: preserve-3d;
+    will-change: transform;
+    transition: box-shadow 0.3s ease;
+    padding: 20px;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.tilt-card:hover {
+    box-shadow:
+        0 25px 50px rgba(0, 0, 0, 0.3),
+        0 0 30px rgba(var(--primary-color-rgb, 139, 195, 74), 0.1);
+}
+
+.tilt-card-inner {
+    transform-style: preserve-3d;
+    position: relative;
+    z-index: 1;
+    border-radius: 8px;
+    transition: background 0.2s ease;
+}
+
+/* Kart içindeki başlık için subtle efekt */
+.tilt-card h4 {
+    transition: color 0.3s ease;
+}
+
+.tilt-card:hover h4 {
+    color: var(--primary-color, #8bc34a);
+}
+
+/* Why Choose Us görselleri için */
+.why-choose-images {
+    perspective: 1000px;
+}
+
+.why-choose-img-main,
+.why-choose-img-secondary {
+    will-change: transform;
+}
+
+.why-choose-badge {
+    will-change: transform;
+}
+
+/* Sayaç için tabular nums (sabit genişlik) */
+.why-choose-counter {
+    font-variant-numeric: tabular-nums;
+}
+
+/* ================================================== */
+/* Services - Hizmet Kartları */
+/* ================================================== */
+
+.service-card {
+    will-change: transform;
+    transition: box-shadow 0.3s ease;
+}
+
+.service-card-img {
+    overflow: hidden;
+}
+
+.service-card-img img {
+    will-change: transform;
+    transition: transform 0.5s ease;
+}
+
+.service-card-content {
+    will-change: transform, box-shadow;
+    transition: box-shadow 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+}
+
+/* Magnetic Button */
+.magnetic-btn {
+    will-change: transform;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.magnetic-btn:hover {
+    background-color: var(--primary-color-dark, #7cb342);
+}
