@@ -1,0 +1,13 @@
+/* Scheme-3: Boutique Organic */
+* {
+  --primary-color: #E6B89C;
+  /* Yumuşak Bronz/Ten Rengi */
+  --primary-color-rgb: 230, 184, 156;
+  --bg-dark-1: #0F2027;
+  /* Derin Petrol (Deep Teal) */
+  --bg-dark-2: #071014;
+  /* Zifiri Petrol */
+  --bg-dark-3: #1e1e1e;
+  /* Standart Antrasit */
+  --bg-dark-1-rgb: 15, 32, 39;
+}

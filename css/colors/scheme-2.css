@@ -1,0 +1,13 @@
+/* Scheme-2: Architectural Modern */
+* {
+  --primary-color: #B4D2BA;
+  /* Buzlu Adaçayı (Sage Mist) */
+  --primary-color-rgb: 180, 210, 186;
+  --bg-dark-1: #15202B;
+  /* Mavi Tabanlı Füme (Night Blue) */
+  --bg-dark-2: #0D141C;
+  /* Derin Gece Mavisi */
+  --bg-dark-3: #1e1e1e;
+  /* Standart Antrasit */
+  --bg-dark-1-rgb: 21, 32, 43;
+}

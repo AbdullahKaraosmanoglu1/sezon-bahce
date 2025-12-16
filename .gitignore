@@ -1,0 +1,17 @@
+# Orijinal template - git'e gönderilmeyecek
+default-template/
+
+# IDE dosyaları
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS dosyaları
+.DS_Store
+Thumbs.db
+
+# Geçici dosyalar
+*.tmp
+*.temp
+*.log

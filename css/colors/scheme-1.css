@@ -1,0 +1,13 @@
+/* Scheme-1: Prestige Luxury */
+* {
+  --primary-color: #D4AF37;
+  /* Metalik Altın / Şampanya */
+  --primary-color-rgb: 212, 175, 55;
+  --bg-dark-1: #0B1C15;
+  /* Zifiri Zümrüt (Black Green) */
+  --bg-dark-2: #050F0B;
+  /* Derin Siyah Yeşil */
+  --bg-dark-3: #1e1e1e;
+  /* Standart Antrasit */
+  --bg-dark-1-rgb: 11, 28, 21;
+}
