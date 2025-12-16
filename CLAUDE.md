@@ -35,6 +35,26 @@ Bu proje, Solaria HTML template'i kullanılarak oluşturulan **Sezon Bahçe** st
 - Aynı kural JS dosyaları ve scriptler için de geçerli.
 - Inline `<script>` ve `style=""` attribute'larından kaçınılacak.
 
+### Kural 7: SEO ve Erişilebilirlik
+- Tüm `<img>` etiketlerinde `alt` attribute bulunacak.
+- Sayfa başlıkları (`<title>`) ve meta açıklamaları Türkçe ve anlamlı olacak.
+- Semantic HTML etiketleri tercih edilecek (`<header>`, `<nav>`, `<main>`, `<section>`, `<footer>` vb.).
+
+### Kural 8: CSS Override Stratejisi
+- Template'in orijinal CSS dosyalarında (`style.css`, `plugins.css` vb.) değişiklik yapılmayacak.
+- Tüm stil özelleştirmeleri `css/custom.css` dosyasında yapılacak.
+- `custom.css` dosyası, HTML'de orijinal CSS'lerden sonra çağrılacak.
+
+### Kural 9: JS Override Stratejisi
+- Template'in orijinal JS dosyalarında (`designesia.js`, `plugins.js` vb.) değişiklik yapılmayacak.
+- Tüm JavaScript özelleştirmeleri `js/custom.js` dosyasında yapılacak.
+- `custom.js` dosyası, HTML'de orijinal JS'lerden sonra çağrılacak.
+- Mevcut fonksiyonları ezmek yerine, yeni fonksiyonlar tanımlanacak veya event listener'lar eklenecek.
+
+### Kural 10: Varlık (Asset) Yönetimi
+- Yeni eklenen görseller `images/sezon-bahce/` klasöründe tutulacak.
+- Template'den kalan kullanılmayan görseller (solar panel vb.) proje bitiminde temizlenecek.
+
 ---
 
 ## Dosya Yapısı
@@ -60,3 +80,4 @@ sezon-bahce/
 ## Notlar
 - Template: Solaria - Solar Energy HTML Template
 - Hedef: Bahçe/peyzaj temalı Türkçe web sitesi
+- Tasarım Dili: Lüks, profesyonel, dingin
